@@ -1,27 +1,25 @@
-import express from 'express';
+import express from 'express'
 import ejs from 'ejs'
+import dotenv from 'dotenv'
 
-// const, let ou var -- const valor fixo --  let valor a ser mudado -- var escopo global    
-
-const app = express();
-app.set('view engine', 'ejs');
+//Configurções
+dotenv.config();
+const app = express()
+app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
+//Rotas
 app.get('/', (req, res) => {
     res.render('index')
 })
 app.get('/login', (req,res) => {
     res.render('login')
 })
-const port = 3000
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
-});
-
-
-
-//GET, POST, DELETE, PATCH
-// GET pra pegar um informação
-// POST, pra enviar informações
-// DELETE, deleta um dado já cadastrado
-//PATCH, Update/ atuialização já possui
+app.get('/cadastrar', (req, res) =>{
+    res.render('cadastrar')
+})
+//Porta
+const PORT = process.env.PORT
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+})
