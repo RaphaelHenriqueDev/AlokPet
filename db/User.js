@@ -2,6 +2,11 @@ import { Sequelize } from "sequelize"
 import conn from './usersDb.js'
 
 const User = conn.define('users', {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     name: {
         type: Sequelize.STRING,
         allowNull: false
@@ -20,10 +25,10 @@ const User = conn.define('users', {
     }
 })
 
-User.sync({force: false}).then(() => {
-    console.log('tabela criada com sucesso')
-}).catch((err)=> {
+User.sync({ force: false}).then(() => {
+    console.log('Tabela criada com sucesso')
+}).catch((err) => {
     throw new Error(err)
-})
+});
 
 export default User
