@@ -2,5 +2,43 @@
 <body>
     <%- include('partials/navbar');%>
     <h1>Cadastrar</h1>
+    <div class="container">
+        <form action="/saveuser" method="post">
+            <label>Nome:</label>
+            <input name="name"type="text" placeholder="Digite o seu nome completo" required>
+            <br><label>Número de contato:</label>
+            <input type="tel" id="phone" name="phone"  placeholder="(00) 00000-0000" />
+            <script>
+                const phoneInput = document.getElementById('phone');
+            
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value;
+                    
+                    // Remove tudo que não é número
+                    value = value.replace(/\D/g, '');
+            
+                    // Aplica a máscara
+                    if (value.length > 10) {
+                        value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+                    } else if (value.length > 5) {
+                        value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+                    } else if (value.length > 2) {
+                        value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+                    } else {
+                        value = value.replace(/^(\d*)/, '($1');
+                    }
+            
+                    e.target.value = value;
+                });
+            </script>
+            <br><label>Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><label>Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <br><label>Confirme sua Senha:</label>
+            <input type="password" id="confirmPsw" name="confirmPsw" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
 </body>
 </html>
