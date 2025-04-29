@@ -1,100 +1,91 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff3df;
-}
-
-.navbar {
+    background-color: #FFF3DF;
+    }
+    .navbar {
     font-weight: 600;
     font-size: 23px;
-    background-color: #310c5b;
+    background-color: #EE9EAC;
     padding: 1.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar ul {
-    list-style: none; 
-    display: flex; 
-    gap: 2em; 
+    }
+    .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
     margin: 0;
     padding: 0;
-}
-
-.itens {
+    }
+    .itens {
     text-decoration: none;
-    color: #FFB5A7;
+    color: #FFF3DF;
     font-family: 'League Spartan', sans-serif;
     transition: color 0.3s ease;
-}
-
-.itens:hover {
-    color: #ffc9be; 
-}
-
-.logo-nav {
+    }
+    .itens:hover {
+    color: #fff5e5;
+    }
+    .logo-nav {
     max-width: 300px;
     width: 100%;
     height: auto;
-}
-
-h1 {
-    color: #310c5b;
+    }
+    h1 {
+    color: #250001;
     font-family: 'League Spartan', sans-serif;
     font-size: 60px;
     text-align: center;
     margin-top: 30px;
-}
-
-.container {
+    }
+    .container {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff8f0; /* Um tom mais claro para destaque */
+    background-color: rgba(238, 158, 172, 0.15); /* Um tom mais claro para destaque */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
-form {
+    }
+    form {
     display: flex;
     flex-direction: column;
-}
-
-label {
+    }
+    label {
     margin: 10px 0 5px;
     font-weight: bold;
     font-family: 'League Spartan', sans-serif;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-input[type="password"] {
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
     padding: 10px;
     margin-bottom: 15px;
-    border: 2px solid #2e1a47;
+    border: 2px solid #250001;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
-
-    &:focus{
+        &:focus{
         border-color: #f7ab9d; /* Pêssego claro no focus */
-    background-color: #fff;
+        background-color: #fff;
+        }
     }
-}
-
-button {
+    button {
     padding: 10px;
-    background-color: #310c5b;
-    color: #f7ebd8;
+    background-color: #A06F53;
+    color:#FFF3DF;
     border: none;
-    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius:30px; 
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-    &:hover{
-     background-color: #4b2d73;
+     
+        &:hover{
+        background-color: #4b2d73;
+        }
     }
-}
