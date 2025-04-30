@@ -96,6 +96,9 @@ app.get('/logout', (req, res) => {
         res.redirect('/')
     })
 })
+app.get('/quem-somos', (req, res)=> {
+    res.render('quem-somos')
+})
 //Porta
 const PORT = process.env.PORT
 app.listen(PORT, () => {
