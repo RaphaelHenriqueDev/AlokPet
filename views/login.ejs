@@ -4,6 +4,12 @@
     <h1>Login</h1>
     <div class="container">
         <form action="/login" method="post">
+            <br><label>Selecione o Tipo de Login:</label>
+            <select id="tipoCadastro" name="tipoCadastro" required>
+                <option value="false">Selecione a forma de Login</option>
+                <option value="cliente">Cliente</option>
+                <option value="empresa">Empresa</option>
+            </select>
             <br><label>Email:</label>
             <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
             <br><label>Senha:</label>

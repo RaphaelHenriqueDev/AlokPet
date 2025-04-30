@@ -1,12 +1,12 @@
 <nav class="navbar">
     <a href="/">
-        <img class="logo-nav" src="/img/imagem_2025-04-26_213428993-removebg-preview (1).png" alt="AlokPet">
+        <img class="logo-nav" src="/img/imagem_2025-04-29_111051839-removebg-preview.png" alt="AlokPet">
     </a>
     <ul>
         <li>
             <a class="itens" href="/quem-somos">Quem Somos</a>
         </li>
-        <% if (typeof session !== 'undefined' && session.userId) { %>
+        <% if (typeof session !== 'undefined' && (session.userId || session.empId)) { %>
             <li>
                 <a class="itens" href="/logout">Sair</a>
             </li>
@@ -17,7 +17,6 @@
             <li>
                 <a class="itens" href="/cadastrar">Cadastrar</a>
             </li>
-
         <% } %>
     </ul>
 </nav>

@@ -1,100 +1,146 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fff3df;
-}
-
-.navbar {
+    background-color: #FFF3DF;
+  }
+  
+  .navbar {
     font-weight: 600;
     font-size: 23px;
-    background-color: #310c5b;
-    padding: 1.5em;
+    background-color: #EE9EAC;
+    padding: 0.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar ul {
-    list-style: none; 
-    display: flex; 
-    gap: 2em; 
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
     margin: 0;
     padding: 0;
-}
-
-.itens {
+  }
+  
+  .itens {
     text-decoration: none;
-    color: #FFB5A7;
+    color: #FFF3DF;
     font-family: 'League Spartan', sans-serif;
     transition: color 0.3s ease;
-}
-
-.itens:hover {
-    color: #ffc9be; 
-}
-
-.logo-nav {
-    max-width: 300px;
-    width: 100%;
+  }
+  
+  .itens:hover {
+    color: #fff5e5;
+  }
+  
+  .logo-nav {
+    max-width: 400px;
+    width: 90%;
     height: auto;
-}
-
-h1 {
-    color: #310c5b;
+  }
+  
+  h1 {
+    color: #250001;
     font-family: 'League Spartan', sans-serif;
     font-size: 60px;
     text-align: center;
     margin-top: 30px;
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff8f0; /* Um tom mais claro para destaque */
+    background-color: rgba(238, 158, 172, 0.15);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-}
-
-label {
+  }
+  
+  label {
     margin: 10px 0 5px;
     font-weight: bold;
     font-family: 'League Spartan', sans-serif;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-input[type="password"] {
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select {
     padding: 10px;
     margin-bottom: 15px;
-    border: 2px solid #2e1a47;
+    border: 2px solid #250001;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
-
-    &:focus{
-        border-color: #f7ab9d; /* Pêssego claro no focus */
-    background-color: #fff;
-    }
-}
-
-button {
+  }
+  
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  select:focus {
+    border-color: #f7ab9d;
+    background-color: #fffaf6;
+  }
+  
+  button {
     padding: 10px;
-    background-color: #310c5b;
-    color: #f7ebd8;
+    background-color: #A06F53;
+    color: #FFF3DF;
     border: none;
-    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-    &:hover{
-     background-color: #4b2d73;
+  }
+  
+  button:hover {
+    background-color: #250001;
+  }
+  
+  /* Estilo para seletor de tipo de cadastro */
+  .cadastro-tipo {
+    margin-bottom: 20px;
+  }
+  
+  #tipoCadastro {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #250001;
+    background-color: #fff;
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+  /* Campos adicionais da empresa */
+  #camposEmpresa {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  input[name="name"],
+  input[name="empName"],
+  input[name="cnpj"]{
+    width: 94.5%;
+  }
+  select[name="typeEmp"]{
+    width: 100%;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
     }
-}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
