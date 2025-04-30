@@ -3,6 +3,9 @@
         <img class="logo-nav" src="/img/imagem_2025-04-26_213428993-removebg-preview (1).png" alt="AlokPet">
     </a>
     <ul>
+        <li>
+            <a class="itens" href="/quem-somos">Quem Somos</a>
+        </li>
         <% if (typeof session !== 'undefined' && session.userId) { %>
             <li>
                 <a class="itens" href="/logout">Sair</a>
@@ -14,9 +17,7 @@
             <li>
                 <a class="itens" href="/cadastrar">Cadastrar</a>
             </li>
-            <li>
-                <a class="itens" href="/quem-somos">Quem Somos</a>
-            </li>
+
         <% } %>
     </ul>
 </nav>
