@@ -1,6 +1,36 @@
 <%- include('partials/header.ejs');%>
 <body>
     <%- include('partials/navbar');%>
-    <h1>AlokPet</h1>
+    <!-- <h1>AlokPet</h1> -->
+    <div class="slider">
+        <div class="slides" id="slideContainer">
+          <img src="/img/image0.png" alt="Imagem 1">
+          <img src="/img/image1.png" alt="Imagem 2">
+          <img src="/img/image3.png" alt="Imagem 3">
+        </div>
+      </div>
+    
+      <h1 class="firstItem"> Seja Bem-vindo</h1>
+      <div class="container">
+        <ul class="empresa-lista">
+          <% empresas.forEach(empresa => { %>
+            <li class="empresa-item">
+              <a href="/empresa/<%= empresa.id %>" class="empresa-nome">
+                <strong><%= empresa.empName %></strong>
+              </a>
+              <span class="empresa-info"> - <%= empresa.typeEmp %> - CNPJ: <%= empresa.cnpj %></span>
+            </li>
+          <% }) %>
+        </ul>
 </body>
+<script>
+  const slideContainer = document.getElementById('slideContainer');
+  const totalSlides = 3;
+  let index = 0;
+
+  setInterval(() => {
+  index = (index + 1) % totalSlides;
+  slideContainer.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000);
+</script>
 </html>
