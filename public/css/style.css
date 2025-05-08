@@ -3,7 +3,112 @@ body {
     padding: 0;
     background-color: #FFF3DF;
   }
+  .empresa-detalhe {
+  background-color: #ee9eab80;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(37, 0, 1, 0.2);
+  border-left: 10px solid #FFF;
+  color: #250001;
+}
+
+.empresa-name {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #250001;
+}
+
+.empresa-info {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.botao-voltar, .botao-selecionar {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #A06F53;
+  color: #FFF3DF;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.botao-selecionar{
+  margin-left: 180px;
+  margin-top: 2rem;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.botao-voltar:hover, .botao-selecionar:hover{
+  background-color: #250001;
+  transform: translateY(-2px);
+}
+.botao-selecionar:hover{
+  background-color: #250001;
+  color:#FFF;
+  transform: translateY(-2px)
+}
+  .empresa-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+  }
   
+  .empresa-item {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #EE9EAC;
+    border-left: 8px solid #A06F53;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .empresa-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(37, 0, 1, 0.2);
+  }
+  
+  .empresa-nome {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .empresa-nome strong {
+    font-weight: 700;
+  }
+  
+  .empresa-info {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    display: block;
+    margin-top: 0.4rem;
+    color: #250001;
+    font-size: 0.95rem;
+  }
+#first::after, #second::after, #third::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ee9eabdb; 
+  pointer-events: none;
+}
+.firstItem{
+  margin-top: 90px;
+}
   .navbar {
     font-weight: 600;
     font-size: 23px;

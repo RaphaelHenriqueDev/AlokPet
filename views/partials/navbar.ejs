@@ -8,6 +8,9 @@
         </li>
         <% if (typeof session !== 'undefined' && (session.userId || session.empId)) { %>
             <li>
+                <a class="itens" href="/pet">Meu Pet</a>
+            </li>
+            <li>
                 <a class="itens" href="/logout">Sair</a>
             </li>
         <% } else { %>

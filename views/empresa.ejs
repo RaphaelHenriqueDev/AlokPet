@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/AloKPET-removebg-preview.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;500;600;700&display=swap" rel="stylesheet">
+    <title>Empresa <%= empresa.empName %></title>
+     <style>
+    </style>
+</head>
+<body>
+<%- include('partials/navbar');%>
+  
+  <div class="empresa-detalhe">
+    <h1 class="empresa-name"><%= empresa.empName %></h1>
+    <p class="empresa-info"><strong>Segmento:</strong> <%= empresa.typeEmp %></p>
+    <p class="empresa-info"><strong>CNPJ:</strong> <%= empresa.cnpj %></p>
+  
+    <a href="/" class="botao-voltar">← Voltar para a lista</a>
+    <a href="/solicTransp" class="botao-selecionar">Solicitar Transporte</a>
+  </div>
+  
+
+</body>
+</html>

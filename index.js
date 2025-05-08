@@ -29,10 +29,31 @@ app.use((req, res, next) => {
 
 
 //Rotas
-app.get('/', (req, res) => {
-    console.log(req.session) 
-    res.render('home')
+app.get('/', async (req, res) => {
+    try {
+        const empresas = await Emp.findAll()
+        res.render('home', { empresas })
+      } catch (error) {
+        console.error(error);
+        res.status(500).send('Erro ao buscar empresas');
+      }
 })
+app.get('/empresa/:id', async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const empresa = await Emp.findByPk(id); // Busca pelo ID
+      
+      if (!empresa) {
+        return res.status(404).send('Empresa não encontrada');
+      }
+  
+      res.render('empresa', { empresa }); // Renderiza a view com os dados
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Erro ao buscar empresa');
+    }
+  });
 app.get('/login', (req,res) => {
     res.render('login')
 })
@@ -168,6 +189,12 @@ app.get('/logout', (req, res) => {
 })
 app.get('/quem-somos', (req, res)=> {
     res.render('quem-somos')
+})  
+app.get('/pet',  (req, res) => {
+    res.render('pet')
+})
+app.get('/solicTransp', (req, res) => {
+    res.render('solicTransp')
 })
 //Porta
 const PORT = process.env.PORT
