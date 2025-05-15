@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #DACAB0;
+  background-color: #ffffff;
 }
 .empresa-detalhe {
   background-color: #fffaf6;
@@ -10,14 +10,14 @@ body {
   margin: 3rem auto;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(37, 0, 1, 0.2);
-  color: #250001;
+  color: #28292A;
 }
 
 .empresa-name {
   font-family: "League Spartan", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #250001;
+  color: #28292A;
 }
 
 .empresa-info {
@@ -30,8 +30,8 @@ body {
 .botao-selecionar {
   display: inline-block;
   margin-top: 2rem;
-  background-color: #a06f53;
-  color: #fff3df;
+  background-color: #f4a9ba;
+  color: #FFFFFF;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 8px;
@@ -48,14 +48,10 @@ body {
 
 .botao-voltar:hover,
 .botao-selecionar:hover {
-  background-color: #250001;
+  background-color: #e59faf;
   transform: translateY(-2px);
 }
-.botao-selecionar:hover {
-  background-color: #250001;
-  color: #fff;
-  transform: translateY(-2px);
-}
+
 .empresa-lista {
   list-style: none;
   padding: 0;
@@ -81,7 +77,7 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #250001;
+  color: #28292A;
 }
 
 .empresa-nome strong {
@@ -93,7 +89,7 @@ body {
   font-weight: bold;
   display: block;
   margin-top: 0.4rem;
-  color: #250001;
+  color: #28292A;
   font-size: 0.95rem;
 }
 #first::after,
@@ -114,7 +110,7 @@ body {
 .navbar {
   font-weight: 600;
   font-size: 23px;
-  background-color: #6f3d2f;
+  background-color: #A1DBEC;
   padding: 2.5em;
   display: flex;
   justify-content: space-between;
@@ -131,13 +127,14 @@ body {
 
 .itens {
   text-decoration: none;
-  color: #ee9eac;
+  color: #FFFFFF;
+  font-weight: bold;
   font-family: "League Spartan", sans-serif;
   transition: color 0.3s ease;
 }
 
 .itens:hover {
-  color: #b36677;
+  color: #ffe6ec;
 }
 
 .logo-nav {
@@ -147,7 +144,7 @@ body {
 }
 
 h1 {
-  color: #5f291b;
+  color: #28292A;
   font-family: "League Spartan", sans-serif;
   font-size: 60px;
   text-align: center;
@@ -158,7 +155,7 @@ h1 {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #a06f53; /* Um tom mais claro para destaque */
+  background-color: #A1DBEC; /* Um tom mais claro para destaque */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -167,7 +164,7 @@ h1 {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fffaf680; /* Um tom mais claro para destaque */
+  background-color: #fffaf6; /* Um tom mais claro para destaque */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -190,7 +187,7 @@ input[type="password"],
 select {
   padding: 10px;
   margin-bottom: 15px;
-  border: 2px solid #250001;
+  border: 2px solid #28292A;
   border-radius: 5px;
   font-size: 16px;
   outline: none;
@@ -201,14 +198,14 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 select:focus {
-  border-color: #f7ab9d;
+  border-color: #f4a9ba;
   background-color: #fffaf6;
 }
 
 button {
   padding: 10px;
-  background-color: #a06f53;
-  color: #fff3df;
+  background-color: #f4a9ba;
+  color: #fff;
   border: none;
   border-top-right-radius: 10px;
   border-top-left-radius: 30px;
@@ -216,11 +213,12 @@ button {
   border-bottom-right-radius: 30px;
   font-size: 18px;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #250001;
+  background-color: #e59faf;
 }
 
 /* Estilo para seletor de tipo de cadastro */
@@ -232,7 +230,7 @@ button:hover {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
-  border: 2px solid #250001;
+  border: 2px solid #28292A;
   background-color: #fff;
   font-family: "League Spartan", sans-serif;
 }

@@ -2,5 +2,20 @@
 <body>
     <%- include('partials/navbar');%>
     <h1>Meu Pet</h1>
+        <div class="containerLogin">
+       <form id="formCadastro" action="/pet" method="post">
+
+            <br><label>Email do tutor:</label>
+            <input type="email" name="tutorEmail" placeholder="email@email.com">
+            <br><label>Nome do Pet:</label>
+            <input type="text" name="petName" placeholder="Digite o nome do seu pet">
+            <br><label>Idade do Pet:</label>
+            <input type="text" name="petAge" placeholder="Digite a idade do seu pet"required>
+            <br><label>Peso do Pet:</label>
+            <input type="text" name="petWeight" placeholder="Digite sua Senha" required>
+            <br><label>Raça do Pet:</label>
+            <input type="text" name="petRace" placeholder="Digite a raça do seu cachorro">
+            <br><button type="submit">Cadastrar</button>
+        </form>
 </body>
 </html>

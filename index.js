@@ -7,6 +7,7 @@ import session from 'express-session'
 import bcrypt from 'bcrypt'
 import { where } from 'sequelize'
 import Emp from './db/Emp.js'
+import Pet from './db/Pet.js'
 
 //Configurções
 dotenv.config();
@@ -190,8 +191,39 @@ app.get('/logout', (req, res) => {
 app.get('/quem-somos', (req, res)=> {
     res.render('quem-somos')
 })  
-app.get('/pet',  (req, res) => {
+app.get('/pet', async  (req, res) => {
     res.render('pet')
+})
+app.post('/pet', async (req, res) =>{
+    const { tutorEmail, petName, petAge, petWeight, petRace } = req.body;
+
+    const user = await User.findOne({where: { email: tutorEmail }})
+    if(!user){  
+        res.status(403).send('Email inválido')
+        return
+    }
+
+    try {
+        const newPet = await Pet.create({
+            tutorEmail,
+            petName,
+            petAge,
+            petWeight,
+            petRace
+        });
+
+        req.session.petId = newPet.id;
+        req.session.save((err) => {
+            if (err) {
+              console.log('Erro ao salvar sessão:', err)
+              return res.status(500).send('Erro ao salvar sessão')
+            }
+            res.redirect('/')
+          })
+        } catch (err) {
+        console.log(err);
+        res.status(500).send('Erro ao criar o pet');
+    }
 })
 app.get('/solicTransp', (req, res) => {
     res.render('solicTransp')
