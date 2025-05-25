@@ -1,6 +1,22 @@
 <%- include('partials/header.ejs');%>
 <body>
     <%- include('partials/navbar');%>
-    <h1>Solcitar transporte</h1>
+    <h1>Solicitar transporte</h1>
+    <h2 class="infoPet">Seus Pets:</h2>
+    
+    <% if (pets && pets.length > 0) { %>
+        <ul class="petUl">
+    <% pets.forEach(pet => { %>
+        <div class="mypetcontainer">
+            <li><strong><%= pet.petName %></strong> - <%= pet.petRace %></li>
+            <a href="/thanks" class="confirm-button">Enviar para <%= emp.empName %></a>
+        </div>
+    <% }) %>
+    </ul>
+    <% } else { %>
+        <div class="mypetcontainer">
+            <p>Você ainda não cadastrou nenhum pet.</p>
+        </div>
+    <% } %>
 </body>
 </html>

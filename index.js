@@ -225,8 +225,27 @@ app.post('/pet', async (req, res) =>{
         res.status(500).send('Erro ao criar o pet');
     }
 })
-app.get('/solicTransp', (req, res) => {
-    res.render('solicTransp')
+app.get('/solicTransp/:id', async (req, res) => {
+     const { id } = req.params;
+    //verifico se está logado e puxo os dados do user logado
+    if (req.session.userId) {
+        try {
+            const user = await User.findByPk(req.session.userId);// procuro o usuário pelo id
+            if (user) {
+                const pets = await Pet.findAll({ where: { tutorEmail: user.email } });// agora com os dados do usuário eu procuro o Pet pelo email dele porque o email dele é o tutorEmail no pets db
+                const emp = await Emp.findByPk(id)
+                res.render('solicTransp', { pets, emp });//renderizo o arquivo solicTransp e passo os objetos pets e emp que achei no meu db
+                return;
+            }
+        } catch (err) {
+            console.log(err);
+            return res.status(500).send('Erro ao buscar pets');
+        }
+    }
+    res.render('solicTransp', { pets: [] });//mando o array pets vazio para o front identificar que não tem pets
+})
+app.get('/thanks', (req, res) =>{
+    res.render('thanks')
 })
 //Porta
 const PORT = process.env.PORT
