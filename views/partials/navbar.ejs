@@ -7,9 +7,11 @@
             <a class="itens" href="/quem-somos">Quem Somos</a>
         </li>
         <% if (typeof session !== 'undefined' && (session.userId || session.empId)) { %>
+            <% if (typeof session !== 'undefined' && session.userId) { %>
             <li>
                 <a class="itens" href="/pet">Meu Pet</a>
             </li>
+            <% } %>
             <li>
                 <a class="itens" href="/logout">Sair</a>
             </li>

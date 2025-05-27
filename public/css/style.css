@@ -3,6 +3,74 @@ body {
   padding: 0;
   background-color: #ffffff;
 }
+.thanks{
+  text-align: center;
+}
+.backHome{
+   display: inline-block;
+  margin-top: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f4a9ba;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+.backHome:hover{
+   background-color: #e59faf;
+}
+.infoPet {
+    color: #28292A;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+.petUl {
+    list-style: none;
+    padding: 0;
+}
+
+.mypetcontainer {
+    background-color: #ffe6ec;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: #28292A;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mypetcontainer li {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f4a9ba;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.confirm-button:hover {
+    background-color: #e59faf;
+}
 .empresa-detalhe {
   background-color: #fffaf6;
   padding: 2rem;
