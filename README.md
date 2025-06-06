@@ -95,7 +95,7 @@ Sinta-se à vontade para abrir *issues* ou enviar *pull requests* com melhorias,
          <td align="center">
       <a href="https://github.com/LePignatari" target="_blank">
   <img src="https://avatars.githubusercontent.com/u/118121678?v=4&s=100" width="100px" alt="LePignatari" /><br />
-  <sub><b>Raphael Henrique</b></sub>
+  <sub><b>Letícia Pignatari</b></sub>
 </a>
     </td>
   </tr>
