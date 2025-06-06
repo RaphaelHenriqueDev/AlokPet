@@ -1,4 +1,24 @@
-# AlokPet
-- **AlokPet** is a project developed for our graduation.🎓
-- This application provides a delivery service focused on pet products and services.🐶🚗
-- The goal is to offer a fast, reliable, and user-friendly experience for pet owners, connecting them with the best options available in their area.🌐🚗🏥
+# 🐾 AlokPet
+
+**AlokPet** é um projeto desenvolvido como parte da nossa graduação.  
+Esta aplicação oferece um serviço de entrega focado em produtos e serviços para pets, conectando tutores às melhores opções disponíveis em sua região.
+
+## 🚀 Funcionalidades
+
+- Catálogo de produtos e serviços para pets
+- Sistema de pedidos e entregas
+- Interface amigável e responsiva
+- Cadastro e autenticação de usuários
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Node.js** com **Express** para o backend
+- **EJS** para renderização de páginas
+- **MongoDB** para armazenamento de dados
+- **Bootstrap** para estilização
+
+## 📦 Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/RaphaelHenriqueDev/AlokPet.git
