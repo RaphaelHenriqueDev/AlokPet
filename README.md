@@ -48,7 +48,7 @@ Com uma interface intuitiva, o AlokPet também oferece ferramentas para gerencia
 
 5. Inicie o servidor:
    ```bash
-   npm start
+   npm run dev
    ```
 
 6. Acesse no navegador:
