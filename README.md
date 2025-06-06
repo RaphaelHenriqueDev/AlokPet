@@ -87,7 +87,7 @@ Sinta-se à vontade para abrir *issues* ou enviar *pull requests* com melhorias,
   <tr>
     <td align="center">
       <a href="https://github.com/RaphaelHenriqueDev">
-        <img src="https://avatars.githubusercontent.com/u/118121678?v=4" width="100px;" alt="Raphael Henrique"/><br />
+        <img src="[![RaphaelHenriqueDev](https://avatars.githubusercontent.com/u/118121678?v=4&s=100)](https://github.com/RaphaelHenriqueDev)" width="100px;" alt="Raphael Henrique"/><br />
         <sub><b>Raphael Henrique</b></sub>
       </a>
     </td>
